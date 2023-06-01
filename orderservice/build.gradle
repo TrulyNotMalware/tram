@@ -1,0 +1,18 @@
+dependencies{
+    // Spring boot
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    // JPA
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+
+    // Eventuate-tram
+    // https://eventuate.io/docs/manual/eventuate-tram/latest/getting-started-eventuate-tram.html#getting-started
+    implementation 'io.eventuate.tram.core:eventuate-tram-spring-jdbc-kafka:0.32.0.RELEASE'
+    implementation 'io.eventuate.tram.core:eventuate-tram-spring-events:0.32.0.RELEASE'
+    implementation "io.eventuate.tram.core:eventuate-tram-spring-events-starter:0.32.0.RELEASE"
+
+    //Sleuth is no longer support in springboot 3.
+    // Use Micrometer & Zipkin
+    implementation 'io.micrometer:micrometer-tracing:1.1.1'
+    implementation 'io.micrometer:micrometer-tracing-bridge-otel:1.1.1'
+    implementation 'io.opentelemetry:opentelemetry-exporter-zipkin:1.26.0'
+}

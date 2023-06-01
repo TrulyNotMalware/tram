@@ -1,0 +1,4 @@
+rootProject.name = 'tram'
+include 'orderservice'
+include 'common'
+
